@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>RESULTS</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/results.css') }}">
+</head>
+
+<body>
+	<table class="styled-table">
+		<caption>Top 5 Recommended Products</caption>
+		<thead>
+			<tr>
+				<th>Product Name</th>
+				<th>Percentage</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for key, value in products.items() %}
+			<tr>
+				<td>{{key}}</td>
+				<td>{{value}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</body>
+
+</html>
